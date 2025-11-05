@@ -71,22 +71,28 @@ header {
 
 #surveyContainer {
 	width: 768px;
-	padding-bottom: 70px;
+	padding-bottom: 0;
 	position: relative;
-	overflow: hidden;
+	overflow: visible;
 	margin: 0 auto;
 }
 
 #surveyContainer.surveyContainerOne {
-	height: 600px;
+	height: auto;
+	min-height: 350px;
+	padding-bottom: 20px;
 }
 
 #surveyContainer.surveyContainerTwo {
-	height: 600px;
+	height: auto;
+	min-height: 450px;
+	padding-bottom: 20px;
 }
 
 #surveyContainer.surveyContainerThree {
-	height: 750px;
+	height: auto;
+	min-height: 350px;
+	padding-bottom: 20px;
 }
 
 .main {
@@ -97,18 +103,17 @@ header {
 .wrapper {
 	display: flex;
 	flex-direction: column;
-	flex: 1 1 100%;
-	min-height: calc(100vh - 100px);
+	flex: 1;
+	min-height: 0;
 }
 
 .outerWrapper {
-	position: absolute;
+	position: relative;
 	transition-property: left;
 	transition-duration: 1s;
 	transition-delay: 0.5s;
 	width: 100%;
 	left: 0;
-	max-height: 520px;
 }
 
 .box {
@@ -244,13 +249,11 @@ label span {
 }
 
 .skip-section {
-	padding: 10px 0;
+	padding: 20px 0;
 	text-align: center;
 	background-color: #F9FAEF;
 	width: 100%;
-	margin-top: -60px;
-	position: relative;
-	z-index: 10;
+	margin-top: 60px;
 }
 
 .skip {
@@ -316,16 +319,12 @@ label span {
 		flex: 0 0 calc(25% - 10px)
 	}
 
-	#surveyContainer.surveyContainerOne {
-		height: 500px;
-	}
-
-	#surveyContainer.surveyContainerTwo {
-		height: 600px;
-	}
-
+	#surveyContainer.surveyContainerOne,
+	#surveyContainer.surveyContainerTwo,
 	#surveyContainer.surveyContainerThree {
-		height: 800px;
+		height: auto;
+		min-height: 300px;
+		padding-bottom: 20px;
 	}
 }
 
@@ -344,16 +343,12 @@ label span {
 		flex: 0 0 calc(33.0% - 10px);
 	}
 
-	#surveyContainer.surveyContainerOne {
-		height: 500px;
-	}
-
-	#surveyContainer.surveyContainerTwo {
-		height: 730px;
-	}
-
+	#surveyContainer.surveyContainerOne,
+	#surveyContainer.surveyContainerTwo,
 	#surveyContainer.surveyContainerThree {
-		height: 1150px;
+		height: auto;
+		min-height: 300px;
+		padding-bottom: 20px;
 	}
 
 }
@@ -363,16 +358,12 @@ label span {
 		flex: 0 0 calc(40% - 10px);
 	}
 
-	#surveyContainer.surveyContainerOne {
-		height: 760px;
-	}
-
-	#surveyContainer.surveyContainerTwo {
-		height: 850px;
-	}
-
+	#surveyContainer.surveyContainerOne,
+	#surveyContainer.surveyContainerTwo,
 	#surveyContainer.surveyContainerThree {
-		height: 1350px;
+		height: auto;
+		min-height: 300px;
+		padding-bottom: 20px;
 	}
 
 	.answers__item--label-over label:after {
@@ -455,18 +446,5 @@ label span {
 	.footer-disclaimer {
 		font-size: 11px;
 		text-align: center;
-	}
-	
-	.skip-section {
-		margin-top: -50px;
-		padding: 8px 0;
-	}
-	
-	.wrapper {
-		min-height: calc(100vh - 80px);
-	}
-	
-	#surveyContainer {
-		padding-bottom: 60px;
 	}
 }
