@@ -212,7 +212,7 @@ label span {
 	top: 50%;
 	left: 50%;
 	width: 75%;
-	font-size: 30px;
+	font-size: 24px;
 	color: #fff;
 	transform: translate(-50%, -50%) scale(1);
 	transform-origin: center;
